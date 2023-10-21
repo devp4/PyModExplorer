@@ -1,0 +1,19 @@
+{
+    "example": {
+        "Main": {
+            "Main2": {
+                "Main4": {
+                    "type": "class"
+                },
+                "Main5": {
+                    "type": "class"
+                },
+                "type": "class"
+            },
+            "Main3": {
+                "type": "class"
+            },
+            "type": "class"
+        }
+    }
+}

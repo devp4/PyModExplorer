@@ -1,0 +1,20 @@
+node.name = name
+
+Class 
+base_classes = [base.id for base in node.bases] // Classes it inherits
+
+Module 
+    Vars (values?)
+    
+    Class
+        Name
+        Inherited
+        Class Vars
+        Methods
+        Decorators?
+    
+    Functions
+        Name
+        Parameters (name, annotation?)
+        Return
+        Decorators?
