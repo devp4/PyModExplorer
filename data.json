@@ -3,56 +3,108 @@
         "classes": [
             {
                 "name": "Main",
+                "docstring": "TEST DOC",
                 "inherits": [
                     "Exception"
                 ],
                 "classes": [
                     {
                         "name": "Main2",
+                        "docstring": "",
                         "inherits": [
                             "EncodingWarning"
                         ],
                         "classes": [
                             {
                                 "name": "Main4",
+                                "docstring": "",
                                 "inherits": [],
                                 "classes": [],
-                                "functions": []
+                                "functions": [
+                                    {
+                                        "name": "__init__",
+                                        "docstring": "INIT FUNC",
+                                        "parameters": [
+                                            "self"
+                                        ],
+                                        "classes": [],
+                                        "functions": []
+                                    },
+                                    {
+                                        "name": "__delattr__",
+                                        "docstring": "",
+                                        "parameters": [
+                                            "self",
+                                            "__name",
+                                            "test"
+                                        ],
+                                        "classes": [],
+                                        "functions": []
+                                    }
+                                ]
                             },
                             {
                                 "name": "Main5",
+                                "docstring": "",
                                 "inherits": [],
                                 "classes": [],
-                                "functions": []
+                                "functions": [
+                                    {
+                                        "name": "__delattr__",
+                                        "docstring": "",
+                                        "parameters": [
+                                            "self",
+                                            "__name"
+                                        ],
+                                        "classes": [],
+                                        "functions": []
+                                    }
+                                ]
                             }
                         ],
                         "functions": []
                     },
                     {
                         "name": "Main3",
+                        "docstring": "",
                         "inherits": [],
                         "classes": [],
-                        "functions": []
+                        "functions": [
+                            {
+                                "name": "__ne__",
+                                "docstring": "",
+                                "parameters": [
+                                    "self",
+                                    "__value"
+                                ],
+                                "classes": [],
+                                "functions": []
+                            }
+                        ]
                     }
                 ],
                 "functions": []
             },
             {
                 "name": "Main6",
+                "docstring": "",
                 "inherits": [],
                 "classes": [
                     {
                         "name": "Main7",
+                        "docstring": "",
                         "inherits": [],
                         "classes": [
                             {
                                 "name": "Main8",
+                                "docstring": "",
                                 "inherits": [],
                                 "classes": [],
                                 "functions": []
                             },
                             {
                                 "name": "Main9",
+                                "docstring": "",
                                 "inherits": [],
                                 "classes": [],
                                 "functions": []
@@ -62,14 +114,35 @@
                     },
                     {
                         "name": "Main10",
+                        "docstring": "",
                         "inherits": [],
                         "classes": [],
-                        "functions": []
+                        "functions": [
+                            {
+                                "name": "__call__",
+                                "docstring": "",
+                                "parameters": [
+                                    "self",
+                                    "args",
+                                    "kwds"
+                                ],
+                                "classes": [],
+                                "functions": []
+                            }
+                        ]
                     }
                 ],
                 "functions": []
             }
         ],
-        "functions": []
+        "functions": [
+            {
+                "name": "func",
+                "docstring": "",
+                "parameters": [],
+                "classes": [],
+                "functions": []
+            }
+        ]
     }
 }
