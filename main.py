@@ -11,28 +11,55 @@ class Visitor(ast.NodeVisitor):
     def __init__(self, module):
         self.module = module.split(".")[0]
         self.current = {}
-        self.data = {}
+        self.data = {}  
     
     def visit_Module(self, node):
-        self.data[self.module] = {}
+        self.data[self.module] = {
+            "classes": [],
+            "functions": []
+        }
+
         self.current = self.data[self.module]
         self.generic_visit(node)
 
     def visit_ClassDef(self, node):
         prev = self.current
-        prev[node.name] = {}
-        self.current = prev[node.name]
-
-        data = {
-            "type": "class"
+        data = {    
+            "name": node.name,
+            "inherits": [base.id for base in node.bases],
+            "classes": [],
+            "functions": []
         }
 
+        self.current = data
         self.generic_visit(node)
-        prev[node.name].update(data)
+        prev["classes"].append(data)
         self.current = prev
         
-    def visit_FunctionDef(self, node):
-        self.generic_visit(node)  
+    # def visit_FunctionDef(self, node):
+    #     prev = self.current
+    #     prev[node.name] = {}
+    #     self.current = prev[node.name]
+
+    #     # Get arguments
+    #     arguments = node.__dict__["args"]
+    #     regular_args = [arg.arg for arg in arguments.args] if arguments.args else []
+    #     varargs = [arguments.vararg.arg] if arguments.vararg else []
+    #     kwargs = [arguments.kwarg.arg] if arguments.kwarg else []
+
+    #     all_args = regular_args + varargs + kwargs
+
+    #     # Get Return
+        
+
+    #     data = {
+    #         "type": "function",
+    #         "arguments": all_args
+    #     }
+
+    #     self.generic_visit(node)
+    #     prev[node.name].update(data)
+    #     self.current = prev
 
 
 

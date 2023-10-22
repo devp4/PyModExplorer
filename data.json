@@ -1,19 +1,75 @@
 {
     "example": {
-        "Main": {
-            "Main2": {
-                "Main4": {
-                    "type": "class"
-                },
-                "Main5": {
-                    "type": "class"
-                },
-                "type": "class"
+        "classes": [
+            {
+                "name": "Main",
+                "inherits": [
+                    "Exception"
+                ],
+                "classes": [
+                    {
+                        "name": "Main2",
+                        "inherits": [
+                            "EncodingWarning"
+                        ],
+                        "classes": [
+                            {
+                                "name": "Main4",
+                                "inherits": [],
+                                "classes": [],
+                                "functions": []
+                            },
+                            {
+                                "name": "Main5",
+                                "inherits": [],
+                                "classes": [],
+                                "functions": []
+                            }
+                        ],
+                        "functions": []
+                    },
+                    {
+                        "name": "Main3",
+                        "inherits": [],
+                        "classes": [],
+                        "functions": []
+                    }
+                ],
+                "functions": []
             },
-            "Main3": {
-                "type": "class"
-            },
-            "type": "class"
-        }
+            {
+                "name": "Main6",
+                "inherits": [],
+                "classes": [
+                    {
+                        "name": "Main7",
+                        "inherits": [],
+                        "classes": [
+                            {
+                                "name": "Main8",
+                                "inherits": [],
+                                "classes": [],
+                                "functions": []
+                            },
+                            {
+                                "name": "Main9",
+                                "inherits": [],
+                                "classes": [],
+                                "functions": []
+                            }
+                        ],
+                        "functions": []
+                    },
+                    {
+                        "name": "Main10",
+                        "inherits": [],
+                        "classes": [],
+                        "functions": []
+                    }
+                ],
+                "functions": []
+            }
+        ],
+        "functions": []
     }
 }
