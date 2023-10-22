@@ -1,6 +1,4 @@
-from _ast import AST
 import ast
-from typing import Any
 
 module = "example.py"
 with open(module, "r") as file:
@@ -9,7 +7,7 @@ with open(module, "r") as file:
 
 class Visitor(ast.NodeVisitor):
     def __init__(self, module):
-        self.module = module.split(".")[0]
+        self.module = module
         self.current = {}
         self.data = {}  
     
@@ -46,8 +44,8 @@ class Visitor(ast.NodeVisitor):
         all_args = regular_args + varargs + kwargs
         
         return all_args
-        
-    def visit_FunctionDef(self, node):
+    
+    def visit_Function(self, node):
         prev = self.current
         data = {
             "name": node.name,
@@ -61,6 +59,12 @@ class Visitor(ast.NodeVisitor):
         self.generic_visit(node)
         prev["functions"].append(data)
         self.current = prev
+        
+    def visit_FunctionDef(self, node):
+        self.visit_Function(node)
+
+    def visit_AsyncFunctionDef (self, node):
+        self.visit_Function(node)
 
 
 

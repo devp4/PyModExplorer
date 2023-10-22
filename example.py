@@ -40,3 +40,6 @@ class Main6():
 
 def func():
     pass
+
+async def test():
+    pass

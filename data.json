@@ -1,5 +1,5 @@
 {
-    "example": {
+    "example.py": {
         "classes": [
             {
                 "name": "Main",
@@ -79,6 +79,13 @@
                                 ],
                                 "classes": [],
                                 "functions": []
+                            },
+                            {
+                                "name": "test",
+                                "docstring": "",
+                                "parameters": [],
+                                "classes": [],
+                                "functions": []
                             }
                         ]
                     }
@@ -138,6 +145,13 @@
         "functions": [
             {
                 "name": "func",
+                "docstring": "",
+                "parameters": [],
+                "classes": [],
+                "functions": []
+            },
+            {
+                "name": "test",
                 "docstring": "",
                 "parameters": [],
                 "classes": [],
