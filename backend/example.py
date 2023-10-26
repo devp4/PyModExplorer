@@ -8,9 +8,9 @@ class Main(Exception):
         class Main4():
             def __init__(self) -> None:
                 """INIT FUNC"""
-                pass            
+                self.test = "test"         
             def __delattr__(self, __name: str, test=5,) -> None:
-                pass
+                y = "t"  
         class Main5():
             def __delattr__(self, __name: str) -> None:
                 pass

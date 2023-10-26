@@ -1,0 +1,310 @@
+{
+    "name": "example.py",
+    "children": [
+        {
+            "name": "Main",
+            "children": [
+                {
+                    "name": "Class Variables",
+                    "children": [],
+                    "attributes": []
+                },
+                {
+                    "name": "Instance Variables",
+                    "children": [],
+                    "attributes": []
+                },
+                {
+                    "name": "Main2",
+                    "children": [
+                        {
+                            "name": "Class Variables",
+                            "children": [],
+                            "attributes": []
+                        },
+                        {
+                            "name": "Instance Variables",
+                            "children": [],
+                            "attributes": []
+                        },
+                        {
+                            "name": "Main4",
+                            "children": [
+                                {
+                                    "name": "Class Variables",
+                                    "children": [],
+                                    "attributes": []
+                                },
+                                {
+                                    "name": "Instance Variables",
+                                    "children": [
+                                        {
+                                            "name": "test",
+                                            "attributes": []
+                                        }
+                                    ],
+                                    "attributes": []
+                                },
+                                {
+                                    "name": "__init__",
+                                    "children": [
+                                        {
+                                            "name": "self",
+                                            "attributes": []
+                                        }
+                                    ],
+                                    "attributes": {
+                                        "docstring": "INIT FUNC"
+                                    }
+                                },
+                                {
+                                    "name": "__delattr__",
+                                    "children": [
+                                        {
+                                            "name": "self",
+                                            "attributes": []
+                                        },
+                                        {
+                                            "name": "__name",
+                                            "attributes": []
+                                        },
+                                        {
+                                            "name": "test",
+                                            "attributes": []
+                                        }
+                                    ],
+                                    "attributes": {
+                                        "docstring": ""
+                                    }
+                                }
+                            ],
+                            "attributes": {
+                                "docstring": "",
+                                "inherits": []
+                            }
+                        },
+                        {
+                            "name": "Main5",
+                            "children": [
+                                {
+                                    "name": "Class Variables",
+                                    "children": [],
+                                    "attributes": []
+                                },
+                                {
+                                    "name": "Instance Variables",
+                                    "children": [],
+                                    "attributes": []
+                                },
+                                {
+                                    "name": "__delattr__",
+                                    "children": [
+                                        {
+                                            "name": "self",
+                                            "attributes": []
+                                        },
+                                        {
+                                            "name": "__name",
+                                            "attributes": []
+                                        }
+                                    ],
+                                    "attributes": {
+                                        "docstring": ""
+                                    }
+                                }
+                            ],
+                            "attributes": {
+                                "docstring": "",
+                                "inherits": []
+                            }
+                        }
+                    ],
+                    "attributes": {
+                        "docstring": "",
+                        "inherits": [
+                            "EncodingWarning"
+                        ]
+                    }
+                },
+                {
+                    "name": "Main3",
+                    "children": [
+                        {
+                            "name": "Class Variables",
+                            "children": [],
+                            "attributes": []
+                        },
+                        {
+                            "name": "Instance Variables",
+                            "children": [],
+                            "attributes": []
+                        },
+                        {
+                            "name": "__ne__",
+                            "children": [
+                                {
+                                    "name": "self",
+                                    "attributes": []
+                                },
+                                {
+                                    "name": "__value",
+                                    "attributes": []
+                                }
+                            ],
+                            "attributes": {
+                                "docstring": ""
+                            }
+                        },
+                        {
+                            "name": "test",
+                            "children": [],
+                            "attributes": {
+                                "docstring": ""
+                            }
+                        }
+                    ],
+                    "attributes": {
+                        "docstring": "",
+                        "inherits": []
+                    }
+                }
+            ],
+            "attributes": {
+                "docstring": "TEST DOC",
+                "inherits": [
+                    "Exception"
+                ]
+            }
+        },
+        {
+            "name": "Main6",
+            "children": [
+                {
+                    "name": "Class Variables",
+                    "children": [],
+                    "attributes": []
+                },
+                {
+                    "name": "Instance Variables",
+                    "children": [],
+                    "attributes": []
+                },
+                {
+                    "name": "Main7",
+                    "children": [
+                        {
+                            "name": "Class Variables",
+                            "children": [],
+                            "attributes": []
+                        },
+                        {
+                            "name": "Instance Variables",
+                            "children": [],
+                            "attributes": []
+                        },
+                        {
+                            "name": "Main8",
+                            "children": [
+                                {
+                                    "name": "Class Variables",
+                                    "children": [],
+                                    "attributes": []
+                                },
+                                {
+                                    "name": "Instance Variables",
+                                    "children": [],
+                                    "attributes": []
+                                }
+                            ],
+                            "attributes": {
+                                "docstring": "",
+                                "inherits": []
+                            }
+                        },
+                        {
+                            "name": "Main9",
+                            "children": [
+                                {
+                                    "name": "Class Variables",
+                                    "children": [],
+                                    "attributes": []
+                                },
+                                {
+                                    "name": "Instance Variables",
+                                    "children": [],
+                                    "attributes": []
+                                }
+                            ],
+                            "attributes": {
+                                "docstring": "",
+                                "inherits": []
+                            }
+                        }
+                    ],
+                    "attributes": {
+                        "docstring": "",
+                        "inherits": []
+                    }
+                },
+                {
+                    "name": "Main10",
+                    "children": [
+                        {
+                            "name": "Class Variables",
+                            "children": [],
+                            "attributes": []
+                        },
+                        {
+                            "name": "Instance Variables",
+                            "children": [],
+                            "attributes": []
+                        },
+                        {
+                            "name": "__call__",
+                            "children": [
+                                {
+                                    "name": "self",
+                                    "attributes": []
+                                },
+                                {
+                                    "name": "args",
+                                    "attributes": []
+                                },
+                                {
+                                    "name": "kwds",
+                                    "attributes": []
+                                }
+                            ],
+                            "attributes": {
+                                "docstring": ""
+                            }
+                        }
+                    ],
+                    "attributes": {
+                        "docstring": "",
+                        "inherits": []
+                    }
+                }
+            ],
+            "attributes": {
+                "docstring": "",
+                "inherits": []
+            }
+        },
+        {
+            "name": "func",
+            "children": [],
+            "attributes": {
+                "docstring": ""
+            }
+        },
+        {
+            "name": "test",
+            "children": [],
+            "attributes": {
+                "docstring": ""
+            }
+        }
+    ],
+    "_attributes": {}
+}
