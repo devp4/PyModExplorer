@@ -1,0 +1,753 @@
+{
+    "name": "example2.py",
+    "children": [
+        {
+            "name": "Imports",
+            "children": [
+                {
+                    "name": "PyQt5",
+                    "children": [
+                        {
+                            "name": "*",
+                            "attributes": {
+                                "type": "import"
+                            }
+                        }
+                    ],
+                    "attributes": {
+                        "type": "module"
+                    }
+                },
+                {
+                    "name": "time",
+                    "attributes": {
+                        "type": "import"
+                    }
+                },
+                {
+                    "name": "test",
+                    "attributes": {
+                        "type": "import"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Person",
+            "children": [
+                {
+                    "name": "Inherits",
+                    "children": []
+                },
+                {
+                    "name": "Class Variables",
+                    "children": [
+                        {
+                            "name": "human",
+                            "attributes": {
+                                "type": "varaible"
+                            }
+                        },
+                        {
+                            "name": "pineapple",
+                            "attributes": {
+                                "type": "varaible"
+                            }
+                        }
+                    ],
+                    "attributes": {
+                        "count": 2
+                    }
+                },
+                {
+                    "name": "Instance Variables",
+                    "children": [
+                        {
+                            "name": "name",
+                            "attributes": {
+                                "type": "varaible"
+                            }
+                        },
+                        {
+                            "name": "last_name",
+                            "attributes": {
+                                "type": "varaible"
+                            }
+                        },
+                        {
+                            "name": "age",
+                            "attributes": {
+                                "type": "varaible"
+                            }
+                        }
+                    ],
+                    "attributes": {
+                        "count": 3
+                    }
+                },
+                {
+                    "name": "__init__",
+                    "children": [
+                        {
+                            "name": "Parameters",
+                            "children": [
+                                {
+                                    "name": "self",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "name",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "last_name",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "age",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "attributes": {
+                        "type": "function",
+                        "docstring": "",
+                        "parameterCount": 1
+                    }
+                },
+                {
+                    "name": "display_info",
+                    "children": [
+                        {
+                            "name": "Parameters",
+                            "children": [
+                                {
+                                    "name": "self",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "attributes": {
+                        "type": "function",
+                        "docstring": "",
+                        "parameterCount": 1
+                    }
+                }
+            ],
+            "attributes": {
+                "type": "class",
+                "docstring": "Class person that requires name, last name and age.\nAllows you to display some info about it."
+            }
+        },
+        {
+            "name": "Student",
+            "children": [
+                {
+                    "name": "Inherits",
+                    "children": [
+                        {
+                            "name": "Person",
+                            "attributes": {
+                                "type": "class"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Class Variables",
+                    "children": [
+                        {
+                            "name": "studying",
+                            "attributes": {
+                                "type": "varaible"
+                            }
+                        }
+                    ],
+                    "attributes": {
+                        "count": 1
+                    }
+                },
+                {
+                    "name": "Instance Variables",
+                    "children": [
+                        {
+                            "name": "grade",
+                            "attributes": {
+                                "type": "varaible"
+                            }
+                        },
+                        {
+                            "name": "institution",
+                            "attributes": {
+                                "type": "varaible"
+                            }
+                        }
+                    ],
+                    "attributes": {
+                        "count": 2
+                    }
+                },
+                {
+                    "name": "__init__",
+                    "children": [
+                        {
+                            "name": "Parameters",
+                            "children": [
+                                {
+                                    "name": "self",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "grade",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "institution",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "args",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "kwargs",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "attributes": {
+                        "type": "function",
+                        "docstring": "",
+                        "parameterCount": 1
+                    }
+                },
+                {
+                    "name": "display_info",
+                    "children": [
+                        {
+                            "name": "Parameters",
+                            "children": [
+                                {
+                                    "name": "self",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "attributes": {
+                        "type": "function",
+                        "docstring": "",
+                        "parameterCount": 1
+                    }
+                }
+            ],
+            "attributes": {
+                "type": "class",
+                "docstring": "Class Student that inherits from Person and requires grade and institution (besides the Person ones).\nAllows you to display some info about it."
+            }
+        },
+        {
+            "name": "Teacher",
+            "children": [
+                {
+                    "name": "Inherits",
+                    "children": [
+                        {
+                            "name": "Person",
+                            "attributes": {
+                                "type": "class"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Class Variables",
+                    "children": [],
+                    "attributes": {
+                        "count": 0
+                    }
+                },
+                {
+                    "name": "Instance Variables",
+                    "children": [
+                        {
+                            "name": "institution",
+                            "attributes": {
+                                "type": "varaible"
+                            }
+                        },
+                        {
+                            "name": "classes",
+                            "attributes": {
+                                "type": "varaible"
+                            }
+                        }
+                    ],
+                    "attributes": {
+                        "count": 2
+                    }
+                },
+                {
+                    "name": "__init__",
+                    "children": [
+                        {
+                            "name": "Parameters",
+                            "children": [
+                                {
+                                    "name": "self",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "institution",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "classes",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "args",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "kwargs",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "attributes": {
+                        "type": "function",
+                        "docstring": "",
+                        "parameterCount": 1
+                    }
+                },
+                {
+                    "name": "display_info",
+                    "children": [
+                        {
+                            "name": "Parameters",
+                            "children": [
+                                {
+                                    "name": "self",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "attributes": {
+                        "type": "function",
+                        "docstring": "",
+                        "parameterCount": 1
+                    }
+                }
+            ],
+            "attributes": {
+                "type": "class",
+                "docstring": "Class Teacher that inherits from Person and requires instituiton and classes (besides Person ones).\nAlloes you to display some info about it."
+            }
+        },
+        {
+            "name": "SchoolTeacher",
+            "children": [
+                {
+                    "name": "Inherits",
+                    "children": [
+                        {
+                            "name": "Teacher",
+                            "attributes": {
+                                "type": "class"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Class Variables",
+                    "children": [],
+                    "attributes": {
+                        "count": 0
+                    }
+                },
+                {
+                    "name": "Instance Variables",
+                    "children": [
+                        {
+                            "name": "grades",
+                            "attributes": {
+                                "type": "varaible"
+                            }
+                        }
+                    ],
+                    "attributes": {
+                        "count": 1
+                    }
+                },
+                {
+                    "name": "__init__",
+                    "children": [
+                        {
+                            "name": "Parameters",
+                            "children": [
+                                {
+                                    "name": "self",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "grades",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "args",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "kwargs",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "attributes": {
+                        "type": "function",
+                        "docstring": "",
+                        "parameterCount": 1
+                    }
+                },
+                {
+                    "name": "display_info",
+                    "children": [
+                        {
+                            "name": "Parameters",
+                            "children": [
+                                {
+                                    "name": "self",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "attributes": {
+                        "type": "function",
+                        "docstring": "",
+                        "parameterCount": 1
+                    }
+                }
+            ],
+            "attributes": {
+                "type": "class",
+                "docstring": "Class SchoolTeacher that inherits from Teacher and requires grades.\nAllows you to display some info about it."
+            }
+        },
+        {
+            "name": "CollegeStudent",
+            "children": [
+                {
+                    "name": "Inherits",
+                    "children": [
+                        {
+                            "name": "Student",
+                            "attributes": {
+                                "type": "class"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Class Variables",
+                    "children": [],
+                    "attributes": {
+                        "count": 0
+                    }
+                },
+                {
+                    "name": "Instance Variables",
+                    "children": [
+                        {
+                            "name": "career",
+                            "attributes": {
+                                "type": "varaible"
+                            }
+                        },
+                        {
+                            "name": "semester",
+                            "attributes": {
+                                "type": "varaible"
+                            }
+                        }
+                    ],
+                    "attributes": {
+                        "count": 2
+                    }
+                },
+                {
+                    "name": "__init__",
+                    "children": [
+                        {
+                            "name": "Parameters",
+                            "children": [
+                                {
+                                    "name": "self",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "career",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "semester",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "args",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "kwargs",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "attributes": {
+                        "type": "function",
+                        "docstring": "",
+                        "parameterCount": 1
+                    }
+                },
+                {
+                    "name": "display_info",
+                    "children": [
+                        {
+                            "name": "Parameters",
+                            "children": [
+                                {
+                                    "name": "self",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "attributes": {
+                        "type": "function",
+                        "docstring": "",
+                        "parameterCount": 1
+                    }
+                }
+            ],
+            "attributes": {
+                "type": "class",
+                "docstring": "Class CollegeStudent that inherits from Student and requires career and semester (besides the Student ones).\nAllows you to display some info about it."
+            }
+        },
+        {
+            "name": "Me",
+            "children": [
+                {
+                    "name": "Inherits",
+                    "children": [
+                        {
+                            "name": "Teacher",
+                            "attributes": {
+                                "type": "class"
+                            }
+                        },
+                        {
+                            "name": "CollegeStudent",
+                            "attributes": {
+                                "type": "class"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Class Variables",
+                    "children": [],
+                    "attributes": {
+                        "count": 0
+                    }
+                },
+                {
+                    "name": "Instance Variables",
+                    "children": [],
+                    "attributes": {
+                        "count": 0
+                    }
+                },
+                {
+                    "name": "__init__",
+                    "children": [
+                        {
+                            "name": "Parameters",
+                            "children": [
+                                {
+                                    "name": "self",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "args",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                },
+                                {
+                                    "name": "kwargs",
+                                    "attributes": {
+                                        "type": "parameter"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "attributes": {
+                        "type": "function",
+                        "docstring": "",
+                        "parameterCount": 1
+                    }
+                }
+            ],
+            "attributes": {
+                "type": "class",
+                "docstring": "I'm a teacher on a school but a student in a college."
+            }
+        },
+        {
+            "name": "caesar_cipher",
+            "children": [
+                {
+                    "name": "Parameters",
+                    "children": [
+                        {
+                            "name": "text",
+                            "attributes": {
+                                "type": "parameter"
+                            }
+                        },
+                        {
+                            "name": "shift",
+                            "attributes": {
+                                "type": "parameter"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "attributes": {
+                "type": "function",
+                "docstring": "Simple caesar cipher function that encrypts a string with using caesar cipher.\n        ",
+                "parameterCount": 1
+            }
+        },
+        {
+            "name": "foo",
+            "children": [
+                {
+                    "name": "Parameters",
+                    "children": [
+                        {
+                            "name": "param1",
+                            "attributes": {
+                                "type": "parameter"
+                            }
+                        },
+                        {
+                            "name": "param2",
+                            "attributes": {
+                                "type": "parameter"
+                            }
+                        },
+                        {
+                            "name": "param3",
+                            "attributes": {
+                                "type": "parameter"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "attributes": {
+                "type": "function",
+                "docstring": "foo function docstring",
+                "parameterCount": 1
+            }
+        },
+        {
+            "name": "emtpy",
+            "children": [
+                {
+                    "name": "Parameters",
+                    "children": []
+                }
+            ],
+            "attributes": {
+                "type": "function",
+                "docstring": "",
+                "parameterCount": 1
+            }
+        }
+    ],
+    "attributes": {
+        "type": "module",
+        "docstring": "Example file with classes, iheritance, functions, imported members and constants to test PyAPIReference.\nThis is the docstring for example.py."
+    }
+}
