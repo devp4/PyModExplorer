@@ -8,9 +8,9 @@ const CustomHeader = ({ node, style, onToggle }) => {
         "module": "#EE9949",
         "varaible": "#A8A8FF",
         "class": "#FF4747",
-        "function": "#04EB00",
+        "function": "#39DB49",
         "parameter": "#CF4DFF",
-        "import": "#1DFCCF"
+        "import": "#FF8AE6  "
     }
 
     const getColor = (node) => {
@@ -20,13 +20,13 @@ const CustomHeader = ({ node, style, onToggle }) => {
             }
         }
 
-        return null
+        return "#BFBFBF"
     }
 
     return (
         <div style={style.base}>
         <div onclick={onToggle} style={{ ...style.title, display: "flex", alignItems: "center", gap:"3px"}}>
-            {node.children ? node.toggled ? <BsCaretDownFill size={15}/> : <BsCaretRightFill size={15}/> : null}
+            {node.children ? node.toggled ? <BsCaretDownFill size={14}/> : <BsCaretRightFill size={14}/> : null}
             <div style={{marginLeft: !node.children ? "10px" : null, color: getColor(node)}}>
                 {`${node.name} `}
             </div>
@@ -40,6 +40,30 @@ const CustomToggle = ({ node, style }) => {
         <div/>
     );
 };
+
+const customStyles = {
+    tree: {
+        base: {
+          listStyle: 'none',
+          backgroundColor: '#303030',
+          margin: 0,
+          color: '#9DA5AB',
+          fontFamily: 'lucida grande ,tahoma,verdana,arial,sans-serif',
+          fontSize: '20px'
+        },
+
+        node: {
+            base: {
+                marginTop: 17,
+                marginBottom: 17,
+                marginLeft: 15
+            },
+            activeLink: {
+                background: '#424242'
+            }
+        }
+    }
+}
 
 const Tree = () => {
     const [data, setData] = useState(treeData);
@@ -58,7 +82,7 @@ const Tree = () => {
     }
     
     return (
-       <Treebeard data={data} decorators={{...decorators, Header:CustomHeader, Toggle:CustomToggle}} onToggle={onToggle}/>
+       <Treebeard data={data} decorators={{...decorators, Header:CustomHeader, Toggle:CustomToggle}} onToggle={onToggle} style={customStyles}/>
     )
 }
 

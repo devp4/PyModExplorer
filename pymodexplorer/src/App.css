@@ -36,3 +36,74 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: #212121;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 10px;
+  margin-left: -5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #484848; 
+}
+
+.left-container {
+  float: left;
+  width: 45vw;
+  border-radius: 7px;
+  height: 90vh;
+  margin-right: 3%;
+  margin-left: 2.5%;
+}
+
+.options {
+  margin-top: 10%;
+  border-radius: 7px;
+  border: solid rgb(0, 0, 0);
+  background-color: #303030;
+}
+
+.row {
+ padding: 10px;
+}
+
+.checkbox-label {
+  margin-left: 0.5%;
+  margin-right: 2%;
+  display: inline-block;
+  width: 175px;
+  color: #BFBFBF;
+  font-size: 20px;
+}
+
+.tree-container {
+  width: 45vw;
+  height: 90vh;
+  padding: 0% 0.75% 1% 0.25%;
+  background-color: #303030;
+  border-radius: 7px;
+  border: solid rgb(0, 0, 0);
+  margin: 1%;
+  overflow: auto;
+  float: left;
+}
+
+.css-l48oru .css-11485kn {
+  padding-top: 5px;
+}
