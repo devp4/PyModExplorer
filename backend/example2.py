@@ -15,6 +15,7 @@ class Person:
 	human = True
 
 	def __init__(self, name: str, last_name: str, age: str):
+		import test
 		self.name = name
 		self.last_name = last_name
 		self.age = age

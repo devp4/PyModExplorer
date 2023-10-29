@@ -8,6 +8,7 @@ with open(module, "r") as file:
 class ParentChildBasedVisitor(ast.NodeVisitor):
     def __init__(self, module):
         self.module = module
+        self.current_module = []
         self.current_class = []
         self.current = {}
         self.data = {}  
@@ -15,7 +16,12 @@ class ParentChildBasedVisitor(ast.NodeVisitor):
     def visit_Module(self, node):
         self.data = {
             "name": self.module,
-            "children": [],
+            "children": [
+                {
+                    "name": "Imports",
+                    "children": []
+                }
+            ],
             "attributes": {
                 "type": "module",
                 "docstring": ast.get_docstring(node) if ast.get_docstring(node) else ""
@@ -23,10 +29,43 @@ class ParentChildBasedVisitor(ast.NodeVisitor):
         }
 
         self.current = self.data["children"]
+        self.current_module = self.data["children"]
         self.generic_visit(node)
+        self.current_module[0]["children"].sort(key=lambda imp: "children" not in imp)
+
+    def visit_Import(self, node):
+        imports = self.current_module[0]["children"]
+
+        for name in node.names:
+            imports.append({
+                "name": name.name,
+                "attributes": {
+                    "type": "import"
+                }
+            })
+
+    def visit_ImportFrom(self, node):
+        imports = self.current_module[0]["children"]
+
+        data = {
+            "name": node.module,
+            "children": [],
+            "attributes": {
+                "type": "module"
+            }
+        }
+
+        for name in node.names:
+            data["children"].append({
+                "name": name.name,
+                "attributes": {
+                    "type": "import"
+                }
+            })
+
+        imports.append(data)
 
     def visit_ClassDef(self, node):
-        print(node.decorator_list)
         prev_class = self.current_class
         prev = self.current
         
@@ -42,21 +81,15 @@ class ParentChildBasedVisitor(ast.NodeVisitor):
         data["children"].extend([
             {
                 "name": "Inherits",
-                "children": [{"name": base.id} for base in node.bases]
+                "children": [{"name": base.id, "attributes": {"type": "class"}} for base in node.bases]
             },
             {
                 "name": "Class Variables",
                 "children": [],
-                "attributes": {
-                    "count": 0
-                }
             },
             {
                 "name": "Instance Variables",
                 "children": [],
-                "attributes": {
-                    "count": 0
-                }
             }
         ])
 
@@ -65,8 +98,6 @@ class ParentChildBasedVisitor(ast.NodeVisitor):
 
         self.generic_visit(node)
         prev.append(data)
-        data["children"][1]["attributes"]["count"] = len(data["children"][1]["children"])
-        data["children"][2]["attributes"]["count"] = len(data["children"][2]["children"])
         self.current_class = prev_class
         self.current = prev
 
@@ -93,8 +124,7 @@ class ParentChildBasedVisitor(ast.NodeVisitor):
             "children": [],
             "attributes": {
                 "type": "function",
-                "docstring": ast.get_docstring(node) if ast.get_docstring(node) else "",
-                "parameterCount": 0
+                "docstring": ast.get_docstring(node) if ast.get_docstring(node) else ""
             },
         }
 
@@ -102,7 +132,6 @@ class ParentChildBasedVisitor(ast.NodeVisitor):
             "name": "Parameters",
             "children": self.get_parameters(node.__dict__["args"])
         }])
-        data["attributes"]["parameterCount"] = len(data["children"])
 
         self.current = data["children"]
         self.generic_visit(node)
@@ -126,7 +155,7 @@ class ParentChildBasedVisitor(ast.NodeVisitor):
                     self.current_class[1]["children"].append({
                         "name": target.id,
                         "attributes": {
-                            "type": "varaible"
+                            "type": "variable"
                         }
                     })
                 
@@ -136,7 +165,7 @@ class ParentChildBasedVisitor(ast.NodeVisitor):
                         self.current_class[2]["children"].append({
                             "name": target.attr,
                             "attributes": {
-                            "type": "varaible"
+                            "type": "variable"
                             }
                         })
 
