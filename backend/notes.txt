@@ -1,0 +1,49 @@
+node.name = name
+
+Class 
+base_classes = [base.id for base in node.bases] // Classes it inherits
+
+Module 
+    imports
+    Vars (values?)
+    
+    Class
+        docstring
+        Name
+        Inherited
+        Class Vars
+        Instance Vars
+        Methods
+        Decorators
+            Parameters
+    
+    Functions
+        docstring
+        Name
+        Parameters
+            - Type
+            - annotation
+        Decorators
+            Parameters
+            - Return Annotiation
+
+
+- = as attribtue
+
+FUTURE 
+setting class variable via @classmethod decorator
+Ex:
+@classmethod 
+def x(cls):
+    cls.new_var = 1
+
+colors:
+module 
+variable 
+class 
+function 
+parameters
+
+
+Error handling for flask
+only get class variables not all variables

@@ -5,6 +5,7 @@ class Main(Exception):
     """TEST DOC"""
     name = "Test"
     class Main2(EncodingWarning):
+        name = "test"
         class Main4():
             def __init__(self) -> None:
                 """INIT FUNC"""
@@ -20,9 +21,7 @@ class Main(Exception):
 
         async def test():
             pass
-    
-    # def __init__(self, name: int) -> None:
-    #     pass
+        
 
 class Main6(): 
     name = "Test"
@@ -43,3 +42,6 @@ def func():
 
 async def test():
     pass
+
+
+print(Main.o)

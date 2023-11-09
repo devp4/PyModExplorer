@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { Treebeard, decorators  } from 'react-treebeard';
 import { BsCaretRightFill, BsCaretDownFill } from 'react-icons/bs'
-import treeData from "./data.json"
 
 const CustomHeader = ({ node, style, onToggle }) => {
     const colorPalette = {
         "module": "#EE9949",
-        "varaible": "#A8A8FF",
+        "variable": "#A8A8FF",
         "class": "#FF4747",
         "function": "#39DB49",
         "parameter": "#CF4DFF",
@@ -65,8 +64,7 @@ const customStyles = {
     }
 }
 
-const Tree = () => {
-    const [data, setData] = useState(treeData);
+const Tree = ({ file, setFile }) => {
     const [cursor, setCursor] = useState(false);
 
     const onToggle = (node, toggled) => {
@@ -78,11 +76,11 @@ const Tree = () => {
             node.toggled = toggled;
         }
         setCursor(node);
-        setData(Object.assign({}, data))
+        setFile(Object.assign({}, file))
     }
-    
+		
     return (
-       <Treebeard data={data} decorators={{...decorators, Header:CustomHeader, Toggle:CustomToggle}} onToggle={onToggle} style={customStyles}/>
+       <Treebeard data={file} decorators={{...decorators, Header:CustomHeader, Toggle:CustomToggle}} onToggle={onToggle} style={customStyles}/>
     )
 }
 

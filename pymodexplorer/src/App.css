@@ -70,13 +70,38 @@ body {
   height: 90vh;
   margin-right: 3%;
   margin-left: 2.5%;
+  margin-top: 4%;
+}
+
+.file-selector {
+  font-size: 130%;
+  color: transparent;
+  width: 10.5vh;
+}
+
+.file-selector::-webkit-file-upload-button {
+  background-color: firebrick;
+  color: #39DB49;
+  border: none;
+  margin: 10%;
+}
+
+
+.logo {
+  color: #BFBFBF;
+  text-align: center;
+  font-size: 450%;
+  margin-bottom: 30%;
 }
 
 .options {
-  margin-top: 10%;
+  margin-top: -15%;
+  margin-left: 22%;
   border-radius: 7px;
   border: solid rgb(0, 0, 0);
   background-color: #303030;
+  height: 50vh;
+  width: 50vh;
 }
 
 .row {
